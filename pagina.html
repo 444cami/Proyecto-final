@@ -6,39 +6,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hora de aventura</title>
     <style>
-        .indice {
-            background-image: url("assets/hda.png");
-            background-size: cover;
-            height: 400px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
+        
         body {
             background-image: url("assets/cielo.png");
             background-size: cover;
 
         }
 
-        .logo {
-            max-width: 500px;
-            width: 80%;
+        .indice {
+            position: relative;
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .banner {
+            width: 100%;
             height: auto;
-            filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.5));
+            display: block;
+        }
+
+        .logo {
+            position: absolute;
+            top: 5%;
+            left: 23%;
+            transform: translateX(-50%);
+            width: 40%;
+            height: auto;
+            filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.5));
         }
     </style>
 </head>
 
 <body>
     <header class="indice">
-        <img src="./assets/Adventure Time Sword Logo.png" alt="Horadeaventura" class="logo">
+        <img src="./assets/header.png" alt="header" class="banner">
+        <img src="./assets/logoprincipal.png" alt="Horadeaventura" class="logo">
 
         <nav>
+            <h2>Hora de aventura</h2>
             <ul>
-                <li></li>
-                <li></li>
-                <li></li>
+                <li>
+                    <details>
+                        <summary>Personajes</summary>
+                        <ul>
+                            <li><a href="./nav/principales.html">Principales</a></li>
+                            <li><a href="./nav/secundarios.html">Secundarios</a></li>
+                            <li><a href="./nav/antagonistas.html">Antagonistas</a></li>
+                        </ul>
+                    </details>
+                </li>
+                <li>
+                    <details>
+                        <summary>Serie</summary>
+                        <ul>
+                            <li><a href="./nav/serie/temporadas/temporadas.html">Temporadas</a></li>
+                            <li><a href=""></a></li>
+                        </ul>
+                    </details>
+                </li>
+                <li>Lugares</li>
             </ul>
         </nav>
 
