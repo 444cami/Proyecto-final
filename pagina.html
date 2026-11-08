@@ -6,18 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hora de aventura</title>
     <style>
-        
+        :root {
+            --menu: #ffed2728;
+            --titulodesplegabl: #dc0000ad;
+            --lista2: white;
+            --caja: rgba(110, 138, 144, 0.545);
+
+        }
+
         body {
             background-image: url("assets/cielo.png");
             background-size: cover;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
 
         }
 
         .indice {
             position: relative;
             width: 100%;
-            max-width: 900px;
+            max-width: 100%;
             margin: 0 auto;
+            padding: 0;
             text-align: center;
         }
 
@@ -36,6 +47,93 @@
             height: auto;
             filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.5));
         }
+
+        .menu {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+
+            background-color: var(--menu);
+            border-radius: 20px;
+            padding: 15px;
+            width: 95%;
+            max-width: 1000px;
+            color: #ffffff;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+        }
+
+        .listamenu {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .itemdelmenu {
+            position: relative;
+            margin-bottom: 0px;
+        }
+
+        .titulodesplegable {
+            background-color: var(--titulodesplegabl);
+            color: #ffffff;
+            padding: 10px 10px;
+            border-radius: 10px;
+            text-decoration: none;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        }
+
+        .lista2 {
+            list-style: none;
+            padding-left: 15px;
+            margin-top: 6px;
+        }
+
+        .lista2 li {
+            margin: 4px 0;
+        }
+
+        .lista2 a {
+            color: white;
+            text-decoration: none;
+            font-size: 0.9rem;
+            display: block;
+            padding: 4px 10px;
+            border-radius: 4px;
+        }
+
+        .itemdelmenu details[open] .lista2 {
+            position: absolute;
+            background-color: var(--titulodesplegabl);
+            padding: 8px;
+            border-radius: 6px;
+            min-width: 100px;
+        }
+
+        .info {
+            background-color: var(--caja);
+            color: white;
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+        }
+
+        .info h2 {
+            color: var(--titulodesplegabl);
+            margin-top: 0;
+            font-size: 1.8rem;
+            border-bottom: 2px solid rgb(96, 114, 160);
+            padding-bottom: 10px;
+        }
     </style>
 </head>
 
@@ -44,29 +142,33 @@
         <img src="./assets/header.png" alt="header" class="banner">
         <img src="./assets/logoprincipal.png" alt="Horadeaventura" class="logo">
 
-        <nav>
-            <h2>Hora de aventura</h2>
-            <ul>
-                <li>
+        <nav class="menu">
+            <ul class="listamenu">
+
+                <li class="itemdelmenu">
                     <details>
-                        <summary>Personajes</summary>
-                        <ul>
+                        <summary class="titulodesplegable">Personajes</summary>
+                        <ul class="lista2">
                             <li><a href="./nav/principales.html">Principales</a></li>
                             <li><a href="./nav/secundarios.html">Secundarios</a></li>
                             <li><a href="./nav/antagonistas.html">Antagonistas</a></li>
                         </ul>
                     </details>
                 </li>
-                <li>
+
+                <li class="itemdelmenu">
                     <details>
-                        <summary>Serie</summary>
-                        <ul>
-                            <li><a href="./nav/serie/temporadas/temporadas.html">Temporadas</a></li>
+                        <summary class="titulodesplegable">Serie</summary>
+                        <ul class="lista2">
+                            <li><a href="./nav/semporadas/temporadas.html">Temporadas</a></li>
                             <li><a href=""></a></li>
                         </ul>
                     </details>
                 </li>
-                <li>Lugares</li>
+
+                <li class="itemdelmenu">
+                    <a href="./nav/lugares.html" class="titulodesplegable">Lugares</a>
+                </li>
             </ul>
         </nav>
 
@@ -75,7 +177,13 @@
     <main>
         <div class="info">
             <h2>Sobre Hora de aventura</h2>
-            <p>Hora de Aventura (Adventure Time) es una aclamada serie animada creada por Pendleton Ward para Cartoon Network. La historia sigue las surrealistas y heroicas vivencias de Finn el Humano, un niño de corazón noble, y su hermano adoptivo y mejor amigo Jake el Perro, un sabueso con poderes mágicos para cambiar de forma. Juntos habitan en la mística y colorida Tierra de Ooo, un mundo post-apocalíptico miles de años después de la misteriosa "Guerra de los Champiñones". A lo largo de sus viajes, rescatan princesas, luchan contra criaturas extravagantes, exploran mazmorras y desentrañan profundos misterios emocionales y filosóficos.</p>
+            <p>Hora de Aventura (Adventure Time) es una aclamada serie animada creada por Pendleton Ward para Cartoon
+                Network. La historia sigue las surrealistas y heroicas vivencias de Finn el Humano, un niño de corazón
+                noble, y su hermano adoptivo y mejor amigo Jake el Perro, un sabueso con poderes mágicos para cambiar de
+                forma. Juntos habitan en la mística y colorida Tierra de Ooo, un mundo post-apocalíptico miles de años
+                después de la misteriosa "Guerra de los Champiñones". A lo largo de sus viajes, rescatan princesas,
+                luchan contra criaturas extravagantes, exploran mazmorras y desentrañan profundos misterios emocionales
+                y filosóficos.</p>
         </div>
 
         <nav>
@@ -94,4 +202,4 @@
     </footer>
 </body>
 
-</html>
+</html>erie/t
