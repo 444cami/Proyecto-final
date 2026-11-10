@@ -9,6 +9,9 @@
         :root {
             --titulo: #0096e789;
             --ntemporada: #feb201ce;
+            --menu: #ffed2728;
+            --titulodesplegabl: #dc0000ad;
+            --lista2: white;
         }
 
         body {
@@ -42,6 +45,74 @@
             width: 40%;
             height: auto;
             filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.5));
+        }
+
+        .menu {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+
+            background-color: var(--menu);
+            border-radius: 20px;
+            padding: 15px;
+            width: 95%;
+            max-width: 1000px;
+            color: #ffffff;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+        }
+
+        .listamenu {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .itemdelmenu {
+            position: relative;
+            margin-bottom: 0px;
+        }
+
+        .titulodesplegable {
+            background-color: var(--titulodesplegabl);
+            color: #ffffff;
+            padding: 10px 10px;
+            border-radius: 10px;
+            text-decoration: none;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        }
+
+        .lista2 {
+            list-style: none;
+            padding-left: 15px;
+            margin-top: 6px;
+        }
+
+        .lista2 li {
+            margin: 4px 0;
+        }
+
+        .lista2 a {
+            color: white;
+            text-decoration: none;
+            font-size: 0.9rem;
+            display: block;
+            padding: 4px 10px;
+            border-radius: 4px;
+        }
+
+        .itemdelmenu details[open] .lista2 {
+            position: absolute;
+            background-color: var(--titulodesplegabl);
+            padding: 8px;
+            border-radius: 6px;
+            min-width: 100px;
         }
 
         .contenedor {
@@ -101,6 +172,36 @@
     <header class="indice">
         <img src="../../../assets/header.png" alt="header" class="banner">
         <img src="../../../assets/logoprincipal.png" alt="Horadeaventura" class="logo">
+
+         <nav class="menu">
+            <ul class="listamenu">
+
+                <li class="itemdelmenu">
+                    <details>
+                        <summary class="titulodesplegable">Personajes</summary>
+                        <ul class="lista2">
+                            <li><a href="./nav/principales.html">Principales</a></li>
+                            <li><a href="./nav/secundarios.html">Secundarios</a></li>
+                            <li><a href="./nav/antagonistas.html">Antagonistas</a></li>
+                        </ul>
+                    </details>
+                </li>
+
+                <li class="itemdelmenu">
+                    <details>
+                        <summary class="titulodesplegable">Serie</summary>
+                        <ul class="lista2">
+                            <li><a href="./nav/semporadas/temporadas.html">Temporadas</a></li>
+                            <li><a href=""></a></li>
+                        </ul>
+                    </details>
+                </li>
+
+                <li class="itemdelmenu">
+                    <a href="./nav/lugares.html" class="titulodesplegable">Lugares</a>
+                </li>
+            </ul>
+        </nav>
 
     </header>
 
