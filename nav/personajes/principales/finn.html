@@ -6,12 +6,28 @@
     <title>Finn el humano</title>
     <style>
         .indice{
-            background-image: url(../../../assets/pfinn.png);
-            background-size: cover;
-            height: 400px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            position: relative;
+            width: 100%;
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 0;
+            text-align: center;
+        }
+
+        .banner {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .logo {
+            position: absolute;
+            top: 5%;
+            left: 23%;
+            transform: translateX(-50%);
+            width: 40%;
+            height: auto;
+            filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.5));
         }
 
         body{
@@ -27,11 +43,13 @@
             justify-content: center;
             align-items: end;
         }
+
     </style>
 </head>
 <body>
     <header class="indice">
-        <img src="../assets/logofinn.png" alt="Finn" class="logofinn">
+        <img src="../../../assets/pfinn.png" alt="Finn" class="logofinn">
+       
     </header>
 
     <main>
@@ -42,7 +60,7 @@
     </main>
 
     <footer>
-
+        <img src="" alt="">
     </footer>
 </body>
 </html>

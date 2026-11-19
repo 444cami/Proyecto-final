@@ -1,0 +1,24 @@
+.indice {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+}
+
+.banner {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.logo {
+    position: absolute;
+    top: 5%;
+    left: 23%;
+    transform: translateX(-50%);
+    width: 40%;
+    height: auto;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.5));
+}
