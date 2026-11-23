@@ -9,7 +9,7 @@
 }
 
 body {
-    background-image: url("./assets/cielo.png");
+    background-image: url("assets/cielo.png");
     background-size: cover;
     background-attachment: fixed;
     margin: 0;
