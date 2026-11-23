@@ -1,7 +1,15 @@
-:root {}
+/*clases en comun (header)*/
+:root {
+    --menu: #ffed2728;
+    --titulodesplegable: #dc0000ad;
+    --titulo: #0096e789;
+    --etiqueta: #feb201ce;
+    --caja: rgba(110, 138, 144, 0.545);
+    --texto: #ffffff;
+}
 
 body {
-    background-image: url("assets/cielo.png");
+    background-image: url("./assets/cielo.png");
     background-size: cover;
     background-attachment: fixed;
     margin: 0;
@@ -33,6 +41,8 @@ body {
     filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.5));
 }
 
+
+/*nav*/
 .menu {
     position: absolute;
     bottom: 20px;
@@ -65,7 +75,7 @@ body {
 }
 
 .titulodesplegable {
-    background-color: var(--titulodesplegabl);
+    background-color: var(--titulodesplegable);
     color: #ffffff;
     padding: 10px 10px;
     border-radius: 10px;
@@ -94,8 +104,16 @@ body {
 
 .itemdelmenu details[open] .lista2 {
     position: absolute;
-    background-color: var(--titulodesplegabl);
+    background-color: var(--titulodesplegable);
     padding: 8px;
     border-radius: 6px;
     min-width: 100px;
 }
+
+/*main*/
+.contenedor {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
