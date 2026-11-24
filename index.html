@@ -6,191 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hora de aventura</title>
     <link rel="stylesheet" href="estilo.css">
-    <style>
-        :root {
-            --menu: #ffed2728;
-            --titulodesplegabl: #dc0000ad;
-            --lista2: white;
-            --caja: rgba(110, 138, 144, 0.545);
-            --titulop: #0096e789;
-            --nombre_p: #feb201ce;
-
-        }
-
-        body {
-            background-image: url("assets/cielo.png");
-            background-size: cover;
-            background-attachment: fixed;
-            margin: 0;
-            padding: 0;
-
-        }
-
-        .contenedor {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        .indice {
-            position: relative;
-            width: 100%;
-            max-width: 100%;
-            margin: 0 auto;
-            padding: 0;
-            text-align: center;
-        }
-
-        .banner {
-            width: 100%;
-               height: auto;
-            display: block;
-        }
-
-        .logo {
-            position: absolute;
-            top: 5%;
-            left: 23%;
-            transform: translateX(-50%);
-            width: 40%;
-            height: auto;
-            filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.5));
-        }
-
-        .menu {
-            position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-
-            background-color: var(--menu);
-            border-radius: 20px;
-            padding: 15px;
-            width: 95%;
-            max-width: 1000px;
-            color: #ffffff;
-            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-
-        }
-
-        .listamenu {
-            display: flex;
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            gap: 20px;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-
-        .itemdelmenu {
-            position: relative;
-            margin-bottom: 0px;
-        }
-
-        .titulodesplegable {
-            background-color: var(--titulodesplegabl);
-            color: #ffffff;
-            padding: 10px 10px;
-            border-radius: 10px;
-            text-decoration: none;
-            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-        }
-
-        .lista2 {
-            list-style: none;
-            padding-left: 15px;
-            margin-top: 6px;
-        }
-
-        .lista2 li {
-            margin: 4px 0;
-        }
-
-        .lista2 a {
-            color: white;
-            text-decoration: none;
-            font-size: 0.9rem;
-            display: block;
-            padding: 4px 10px;
-            border-radius: 4px;
-        }
-
-        .itemdelmenu details[open] .lista2 {
-            position: absolute;
-            background-color: var(--titulodesplegabl);
-            padding: 8px;
-            border-radius: 6px;
-            min-width: 100px;
-        }
-
-        .info {
-            background-color: var(--caja);
-            color: white;
-            max-width: 800px;
-            margin: 30px auto;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-
-        }
-
-        .info h2 {
-            color: var(--titulodesplegabl);
-            margin-top: 0;
-            font-size: 1.8rem;
-            border-bottom: 2px solid rgb(96, 114, 160);
-            padding-bottom: 10px;
-        }
-
-        .titulopersonaje {
-            background-color: var(--titulop);
-            color: white;
-            text-align: center;
-            padding: 10px;
-            border-radius: 10px;
-            font-size: 3rem;
-            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-            margin-bottom: 50px;
-        }
-
-        .tarjetas {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 30px;
-            justify-content: center;
-        }
-
-        .tarjeta {
-            position: relative;
-            border-radius: 13px;
-            overflow: hidden;
-            background-color: rgba(255, 255, 255, 0);
-            text-decoration: none;
-        }
-
-        .tarjeta img {
-            width: 100%;
-            height: auto;
-            display: block;
-             box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-        }
-
-        .nombrepersonaje {
-            display: flex;
-            justify-content: center;
-           
-            bottom: 10px;
-            left: 10px;
-            background-color: var(--nombre_p);
-            color: white;
-            font-size: 1.5rem;
-            padding: 3px 12px;
-            border-radius: 19px;
-            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
-        }
-    </style>
 </head>
 
 <body>
@@ -205,9 +20,8 @@
                     <details>
                         <summary class="titulodesplegable">Personajes</summary>
                         <ul class="lista2">
-                            <li><a href="./nav/principales.html">Principales</a></li>
-                            <li><a href="./nav/secundarios.html">Secundarios</a></li>
-                            <li><a href="./nav/antagonistas.html">Antagonistas</a></li>
+                            <li><a href="./nav/personajes/principales/principales.html">Principales</a></li>
+                            <li><a href="./nav/personajes/secundarios/secundarios.html">Secundarios</a></li>
                         </ul>
                     </details>
                 </li>
@@ -217,7 +31,6 @@
                         <summary class="titulodesplegable">Serie</summary>
                         <ul class="lista2">
                             <li><a href="./nav/serie/temporadas/temporadas.html">Temporadas</a></li>
-                            <li><a href=""></a></li>
                         </ul>
                     </details>
                 </li>
@@ -278,15 +91,15 @@
     </main>
     <footer>    
         <a href="https://www.instagram.com/advtimeofficial/?hl=es">
-             <img src="./assets/footer-ig.png" alt="Instagram">    
+             <img src="./assets/footer-ig.png" alt="Instagram" class="redes">    
         </a>
 
         <a href="https://www.facebook.com/horadeaventuras/?locale=es_LA">
-             <img src="./assets/footer-fb.png" alt="Facebook">
+             <img src="./assets/footer-fb.png" alt="Facebook" class="redes">
         </a>
         
         <a href="https://x.com/horadeaventuras">
-            <img src="./assets/footer-twitter.png" alt="Twitter">
+            <img src="./assets/footer-twt.png" alt="Twitter" class="redes">
         </a>
         
     </footer>
